@@ -1,0 +1,14 @@
+
+go get github.com/githubnemo/CompileDaemon
+go get -u github.com/gin-gonic/gin
+
+go get -u gorm.io/gorm
+go get -u gorm.io/driver/mysql
+
+CompileDaemon -command="./gocrud"
+
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Paulo-Prazeres/gocrud.git
+git push -u origin main
