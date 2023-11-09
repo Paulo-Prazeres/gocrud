@@ -19,6 +19,8 @@ var DB *gorm.DB
 func ConnectToDB() {
 	// refer https://github.com/go-sql-driver/mysql#dsn-data-source-name for details
 	var err error
+	// Example of dsn:
+	// dsn := "root:password@tcp(127.0.0.1:3306)/gormdb?charset=utf8mb4&parseTime=True&loc=Local"
 	dsn := os.Getenv("DB_URL")
 	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
